@@ -82,3 +82,16 @@ nav ul li a:hover{
     border: 5px solid;
     border-color: yellow;
  }
+  .card-content{
+    padding: 15px;
+    text-align: center;
+ }
+ .card-content h3{
+    font-size: 1.5rem;
+    color:var(--btn-color);
+    margin-bottom: 20px;
+ }
+.preco{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
