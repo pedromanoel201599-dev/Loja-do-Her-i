@@ -59,16 +59,16 @@ nav ul li a:hover{
     margin-top: 20px;
  }
  #imagem-heroi{
-    width: 300px;
-    height: 250px;
+    width: 500px;
+    height: 400px;
  }
   #boneco-heroi{
-    width: 300px;
-    height: 250px;
+    width: 500px;
+    height: 400px;
  }
   #camisa-heroi{
-    width: 300px;
-    height: 250px;
+    width: 500px;
+    height: 400px;
  }
   .card-game{
     background: var(--bg-card);
@@ -76,6 +76,12 @@ nav ul li a:hover{
     overflow: hidden;
     transition: transform 03s ease;
     border: 2px solid var(--text-color);
+ }
+ .card-game img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
  }
  .card-game:hover{
     transform: translateY(-10px);
