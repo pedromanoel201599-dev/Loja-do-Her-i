@@ -95,3 +95,15 @@ nav ul li a:hover{
     font-size: 2rem;
     margin-bottom: 10px;
 }
+.btn-comprar{
+    background: var(--btn-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+    width: 50%;
+}
+.btn-comprar:hover{
+    background: #00ffff;
+    transform: scale(1.2);
+}
