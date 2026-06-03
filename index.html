@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS EXTERNO -->
     <link rel="stylesheet" href="./src/css/estilo.css">
     <title>Projeto Loja</title>
 </head>
 <body>
+    <!-- Cabeçalho (removi a duplicação que existia no código original) -->
     <header>
         <p class="logo">Loja do <span>All Might</span></p>
         <nav>
@@ -18,63 +18,47 @@
             </ul>
         </nav>
         <div class="carrinho">
-            <span id="carrinho-item">Items:0</span>
+            <span id="carrinho-item">Items: 0</span>
         </div>
     </header>
-      <p class="logo">Loja do<span>All Might</span></p>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="carrinho">
-            <span id="carrinho-item">Items:0</span>
-        </div>
-    </header>
+
     <main id="container">
         <h2>Produtos em Destaques</h2>
         <section class="card">
+            <!-- Produto 1: Quadro -->
             <div class="card-game">
-                <img src="./src/assets/quadro.png" alt="Prdouto1" id="imagem-heroi">
+                <img src="./src/assets/quadro.png" alt="Quadro All Might">
                 <article class="card-content">
-                    <h3>Produto 1</h3>
+                    <h3>Quadro Decorativo</h3>
                     <p class="preco">R$ 300,00</p>
                     <button class="btn-comprar">Comprar</button>
-                    
                 </article>
-                       
-                   <div class="card-game">
-                <img src="./src/assets/action_figure.png" alt="Prdouto1" id="boneco-heroi">
-                <article class="card-content">
-                    <h3>Produto 1</h3>
-                    <p class="preco">R$ 300,00</p>
-                    <button class="btn-comprar">Comprar</button>
-                    
-                </article>
-
-            </div>
-            
-                   <div class="card-game">
-                <img src="./src/assets/camisa.png" alt="Prdouto1" id="camisa-heroi">
-                <article class="card-content">
-                    <h3>Produto 1</h3>
-                    <p class="preco">R$ 300,00</p>
-                    <button class="btn-comprar">Comprar</button>
-                    
-                </article>
-
             </div>
 
+            <!-- Produto 2: Action Figure -->
+            <div class="card-game">
+                <img src="./src/assets/action_figure.png" alt="Action Figure All Might">
+                <article class="card-content">
+                    <h3>Action Figure</h3>
+                    <p class="preco">R$ 300,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </article>
+            </div>
+
+            <!-- Produto 3: Camisa -->
+            <div class="card-game">
+                <img src="./src/assets/camisa.png" alt="Camisa All Might">
+                <article class="card-content">
+                    <h3>Camisa Oficial</h3>
+                    <p class="preco">R$ 300,00</p>
+                    <button class="btn-comprar">Comprar</button>
+                </article>
+            </div>
         </section>
-
-
-
     </main>
+
     <footer>
-        <p>&copy;-2026 Direitos Reservados</p>
+        <p>&copy; 2026 Direitos Reservados</p>
     </footer>
-    
 </body>
 </html>
