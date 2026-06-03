@@ -1,6 +1,5 @@
 :root{
-    --vermelho: #ff0000;
-    --azul: #003399;
+    --vermelho: #e60012;
     --amarelo: #ffcc00;
     --bg-dark: #141414;
     --bg-card: #222831;
@@ -10,154 +9,151 @@
 
 *{
     margin:0;
-    padding: 0;
-    box-sizing: border-box;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    background: var(--bg-dark);
-    color: var(--text-color);
-    font-family: Arial, sans-serif;
+    background:var(--bg-dark);
+    color:var(--text-color);
+    font-family:Arial, sans-serif;
 }
 
+/* HEADER */
+
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background: var(--bg-rgba);
-    margin-bottom: 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 5%;
+    background:var(--bg-rgba);
+    border-bottom:3px solid var(--vermelho);
 }
 
 .logo{
-    font-size: 1.54rem;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-size:1.8rem;
+    font-weight:700;
+    text-transform:uppercase;
+    color:var(--vermelho);
 }
 
-/* Caixinha amarela + All Might em vermelho */
 .logo span{
-    background-color: var(--amarelo);
-    color: var(--vermelho);
-    padding: 8px 15px;
-    border-radius: 6px;
-    font-weight: bold;
+    color:var(--vermelho);
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
+/* MENU */
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
 }
 
 nav ul li a{
-    color: var(--text-color);
-    text-decoration: none;
-    transition: 0.3s;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
 }
 
 nav ul li a:hover{
-    color: var(--vermelho);
-    text-decoration: underline;
-    text-transform: uppercase;   
+    color:var(--vermelho);
 }
+
+.carrinho{
+    color:var(--vermelho);
+    font-weight:bold;
+}
+
+/* CONTAINER */
 
 #container{
-    padding: 0 5% 40px;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width:1400px;
+    margin:0 auto;
+    padding:40px 5%;
 }
 
-/* Produtos em Destaques em VERMELHO */
 #container h2{
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: var(--vermelho);
-    font-weight: bold;
+    text-align:center;
+    color:var(--vermelho);
+    font-size:2.3rem;
+    margin-bottom:40px;
+    text-transform:uppercase;
 }
+
+/* CARDS */
 
 .card{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    width: 100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
 .card-game{
-    background: var(--bg-card);
-    border-radius: 20px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    border: 2px solid var(--azul);
-    display: flex;
-    flex-direction: column;
-}
-
-.card-game img{
-    width: 100%;
-    height: 350px;
-    object-fit: contain;
-    background-color: #2d3748;
-    padding: 15px;
-    display: block;
+    background:var(--bg-card);
+    border-radius:20px;
+    overflow:hidden;
+    border:2px solid var(--vermelho);
+    transition:.3s;
 }
 
 .card-game:hover{
-    transform: translateY(-10px);
-    border-color: var(--vermelho);
-    box-shadow: 0 0 12px var(--amarelo);
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(230,0,18,.6);
+}
+
+.card-game img{
+    width:100%;
+    height:320px;
+    object-fit:contain;
+    background:#2d3748;
+    padding:15px;
 }
 
 .card-content{
-    padding: 20px;
-    text-align: center;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 15px;
+    padding:20px;
+    text-align:center;
 }
 
-/* Nomes dos produtos em AZUL */
 .card-content h3{
-    font-size: 1.5rem;
-    color: var(--azul);
-    font-weight: bold;
+    color:var(--vermelho);
+    margin-bottom:15px;
+    font-size:1.4rem;
 }
 
 .preco{
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin: 10px 0;
-    color: var(--vermelho);
+    color:white;
+    font-size:1.8rem;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
-/* Botão Comprar em AMARELO */
+/* BOTÃO */
+
 .btn-comprar{
-    background-color: var(--amarelo);
-    color: var(--bg-dark);
-    padding: 12px 20px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:var(--amarelo);
+    color:#141414;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
 }
 
 .btn-comprar:hover{
-    background-color: var(--vermelho);
-    color: white;
-    transform: scale(1.05);
+    transform:scale(1.05);
+    background:#ffd633;
 }
 
+/* FOOTER */
+
 footer{
-    text-align: center;
-    padding: 20px;
-    background: var(--bg-rgba);
-    margin-top: 40px;
-    border-top: 3px solid var(--azul);
-    color: var(--amarelo);
+    text-align:center;
+    padding:20px;
+    background:var(--bg-rgba);
+    border-top:3px solid var(--vermelho);
+    color:var(--vermelho);
+    margin-top:40px;
 }
