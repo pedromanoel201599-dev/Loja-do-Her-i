@@ -1,10 +1,11 @@
 :root{
-    --color-primary: blue;
-    --bg-dark: #141414;
-    --bg-card:#555;
-    --text-color:#fff;
-    --bg-rgba:rgba(0,0,0,0.8);
-    --btn-color:#00ff88;
+    --color-primary: #003399;       /* Azul escuro */
+    --bg-dark: #1a1a2e;             /* Fundo escuro com tom azulado */
+    --bg-card: #222831;             /* Fundo dos cards */
+    --text-color: #ffffff;          /* Texto branco */
+    --bg-rgba: rgba(0, 0, 0, 0.85); /* Fundo transparente do cabeçalho */
+    --btn-color: #ffcc00;           /* Amarelo para botões e destaques */
+    --hover-color: #e63946;         /* Vermelho para efeitos de hover */
 }
 
 *{
@@ -26,6 +27,7 @@ header{
     padding: 20px 5%;
     background: var(--bg-rgba);
     margin-bottom: 30px;
+    border-bottom: 3px solid var(--color-primary);
 }
 
 .logo{
@@ -35,7 +37,7 @@ header{
 }
 
 .logo span{
-    color: var(--btn-color);
+    color: var(--btn-color); /* Amarelo no nome */
     padding: 10px;
 }
 
@@ -52,7 +54,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: var(--btn-color);
+    color: var(--hover-color); /* Vermelho ao passar o mouse */
     text-decoration: underline;
     text-transform: uppercase;   
 }
@@ -67,10 +69,9 @@ nav ul li a:hover{
     text-align: center;
     margin-bottom: 30px;
     font-size: 2rem;
-    color: var(--btn-color);
+    color: var(--btn-color); /* Amarelo no título */
 }
 
-/* Ajuste principal para ficar lado a lado */
 .card{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -83,7 +84,7 @@ nav ul li a:hover{
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s ease;
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--color-primary); /* Borda azul */
     display: flex;
     flex-direction: column;
 }
@@ -92,14 +93,15 @@ nav ul li a:hover{
     width: 100%;
     height: 350px;
     object-fit: contain;
-    background-color: #444;
+    background-color: #2d3748;
     padding: 15px;
     display: block;
 }
 
 .card-game:hover{
     transform: translateY(-10px);
-    border-color: yellow;
+    border-color: var(--hover-color); /* Borda vermelha ao passar o mouse */
+    box-shadow: 0 0 15px var(--btn-color); /* Brilho amarelo */
 }
 
 .card-content{
@@ -114,17 +116,19 @@ nav ul li a:hover{
 
 .card-content h3{
     font-size: 1.5rem;
-    color: var(--btn-color);
+    color: var(--btn-color); /* Amarelo no nome do produto */
 }
 
 .preco{
     font-size: 1.8rem;
     font-weight: bold;
     margin: 10px 0;
+    color: var(--hover-color); /* Vermelho no preço */
 }
 
 .btn-comprar{
-    background: var(--btn-color);
+    background: var(--btn-color); /* Amarelo no botão */
+    color: var(--bg-dark);
     padding: 12px 20px;
     border-radius: 10px;
     border: none;
@@ -136,7 +140,8 @@ nav ul li a:hover{
 }
 
 .btn-comprar:hover{
-    background: #00ffff;
+    background: var(--hover-color); /* Vermelho ao passar o mouse */
+    color: white;
     transform: scale(1.05);
 }
 
@@ -145,4 +150,6 @@ footer{
     padding: 20px;
     background: var(--bg-rgba);
     margin-top: 40px;
+    border-top: 3px solid var(--color-primary);
+    color: var(--btn-color);
 }
