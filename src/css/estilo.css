@@ -1,11 +1,11 @@
 :root{
-    --color-primary: #003399;       /* Azul escuro */
-    --bg-dark: #1a1a2e;             /* Fundo escuro com tom azulado */
-    --bg-card: #222831;             /* Fundo dos cards */
-    --text-color: #ffffff;          /* Texto branco */
-    --bg-rgba: rgba(0, 0, 0, 0.85); /* Fundo transparente do cabeçalho */
-    --btn-color: #ffcc00;           /* Amarelo para botões e destaques */
-    --hover-color: #e63946;         /* Vermelho para efeitos de hover */
+    --vermelho: #ff0000;
+    --azul: #003399;
+    --amarelo: #ffcc00;
+    --bg-dark: #141414;
+    --bg-card: #222831;
+    --text-color: #ffffff;
+    --bg-rgba: rgba(0,0,0,0.85);
 }
 
 *{
@@ -27,7 +27,6 @@ header{
     padding: 20px 5%;
     background: var(--bg-rgba);
     margin-bottom: 30px;
-    border-bottom: 3px solid var(--color-primary);
 }
 
 .logo{
@@ -36,9 +35,13 @@ header{
     text-transform: uppercase;
 }
 
+/* Caixinha amarela + All Might em vermelho */
 .logo span{
-    color: var(--btn-color); /* Amarelo no nome */
-    padding: 10px;
+    background-color: var(--amarelo);
+    color: var(--vermelho);
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
 nav ul {
@@ -54,7 +57,7 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: var(--hover-color); /* Vermelho ao passar o mouse */
+    color: var(--vermelho);
     text-decoration: underline;
     text-transform: uppercase;   
 }
@@ -65,11 +68,13 @@ nav ul li a:hover{
     margin: 0 auto;
 }
 
+/* Produtos em Destaques em VERMELHO */
 #container h2{
     text-align: center;
     margin-bottom: 30px;
     font-size: 2rem;
-    color: var(--btn-color); /* Amarelo no título */
+    color: var(--vermelho);
+    font-weight: bold;
 }
 
 .card{
@@ -84,7 +89,7 @@ nav ul li a:hover{
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s ease;
-    border: 2px solid var(--color-primary); /* Borda azul */
+    border: 2px solid var(--azul);
     display: flex;
     flex-direction: column;
 }
@@ -100,8 +105,8 @@ nav ul li a:hover{
 
 .card-game:hover{
     transform: translateY(-10px);
-    border-color: var(--hover-color); /* Borda vermelha ao passar o mouse */
-    box-shadow: 0 0 15px var(--btn-color); /* Brilho amarelo */
+    border-color: var(--vermelho);
+    box-shadow: 0 0 12px var(--amarelo);
 }
 
 .card-content{
@@ -114,20 +119,23 @@ nav ul li a:hover{
     gap: 15px;
 }
 
+/* Nomes dos produtos em AZUL */
 .card-content h3{
     font-size: 1.5rem;
-    color: var(--btn-color); /* Amarelo no nome do produto */
+    color: var(--azul);
+    font-weight: bold;
 }
 
 .preco{
     font-size: 1.8rem;
     font-weight: bold;
     margin: 10px 0;
-    color: var(--hover-color); /* Vermelho no preço */
+    color: var(--vermelho);
 }
 
+/* Botão Comprar em AMARELO */
 .btn-comprar{
-    background: var(--btn-color); /* Amarelo no botão */
+    background-color: var(--amarelo);
     color: var(--bg-dark);
     padding: 12px 20px;
     border-radius: 10px;
@@ -140,7 +148,7 @@ nav ul li a:hover{
 }
 
 .btn-comprar:hover{
-    background: var(--hover-color); /* Vermelho ao passar o mouse */
+    background-color: var(--vermelho);
     color: white;
     transform: scale(1.05);
 }
@@ -150,6 +158,6 @@ footer{
     padding: 20px;
     background: var(--bg-rgba);
     margin-top: 40px;
-    border-top: 3px solid var(--color-primary);
-    color: var(--btn-color);
+    border-top: 3px solid var(--azul);
+    color: var(--amarelo);
 }
