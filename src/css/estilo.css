@@ -6,14 +6,17 @@
     --bg-rgba:rgba(0,0,0,0.8);
     --btn-color:#00ff88;
 }
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     background: var(--bg-dark);
-    color:var(--text-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
 }
 
 header{
@@ -22,94 +25,124 @@ header{
     align-items: center;
     padding: 20px 5%;
     background: var(--bg-rgba);
+    margin-bottom: 30px;
 }
+
 .logo{
     font-size: 1.54rem;
     font-weight: 700;
     text-transform: uppercase;
 }
+
 .logo span{
-    color:var(--btn-color);
+    color: var(--btn-color);
     padding: 10px;
 }
+
 nav ul {
-    display:  flex;
+    display: flex;
     list-style: none;
+    gap: 15px;
 }
-nav ul li {
-    padding: 0 15px;
-}
+
 nav ul li a{
     color: var(--text-color);
     text-decoration: none;
+    transition: 0.3s;
 }
+
 nav ul li a:hover{
-    color:var(--btn-color);
+    color: var(--btn-color);
     text-decoration: underline;
     text-transform: uppercase;   
 }
- #container{
-    padding:  40px 15%;;
- }
 
- .card{
-    display:grid ;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    margin-top: 20px;
- }
- #imagem-heroi{
-    width: 500px;
-    height: 400px;
- }
-  #boneco-heroi{
-    width: 500px;
-    height: 400px;
- }
-  #camisa-heroi{
-    width: 500px;
-    height: 400px;
- }
-  .card-game{
+#container{
+    padding: 0 5% 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#container h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--btn-color);
+}
+
+/* Ajuste principal para ficar lado a lado */
+.card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.card-game{
     background: var(--bg-card);
     border-radius: 20px;
     overflow: hidden;
-    transition: transform 03s ease;
+    transition: transform 0.3s ease;
     border: 2px solid var(--text-color);
- }
- .card-game img{
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
- }
- .card-game:hover{
-    transform: translateY(-10px);
-    border: 5px solid;
-    border-color: yellow;
- }
-  .card-content{
-    padding: 15px;
-    text-align: center;
- }
- .card-content h3{
-    font-size: 1.5rem;
-    color:var(--btn-color);
-    margin-bottom: 20px;
- }
-.preco{
-    font-size: 2rem;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
+
+.card-game img{
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background-color: #444;
+    padding: 15px;
+    display: block;
+}
+
+.card-game:hover{
+    transform: translateY(-10px);
+    border-color: yellow;
+}
+
+.card-content{
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.card-content h3{
+    font-size: 1.5rem;
+    color: var(--btn-color);
+}
+
+.preco{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
 .btn-comprar{
     background: var(--btn-color);
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 10px;
-    border:none;
+    border: none;
     cursor: pointer;
-    width: 50%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
+
 .btn-comprar:hover{
     background: #00ffff;
-    transform: scale(1.2);
+    transform: scale(1.05);
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background: var(--bg-rgba);
+    margin-top: 40px;
 }
